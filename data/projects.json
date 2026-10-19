@@ -1,0 +1,18 @@
+[
+  {
+    "id": "project-1",
+    "title": "Shelter- Stand & Stay",
+    "category": "Architecture Design",
+    "date": "2022-10",
+    "description": "自訂災難以及建築性質，為其設計對應之避難空間。",
+    "imageUrl": "assets/P1-外觀.png"
+  },
+  {
+    "id": "project-2",
+    "title": "Social housing",
+    "category": "Architecture Design",
+    "date": "2024-12",
+    "description": "在此處設計一棟含1種社福機能、2種房型，總房型80間以上之社會住宅。",
+    "imageUrl": "assets/P2-外觀.png"
+  }
+]

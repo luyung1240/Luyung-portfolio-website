@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya Nelson | About Me</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 連結 CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+
+    <!-- 頂部導覽列 -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-square"></span>
+                <span id="nav-name">Maya Nelson</span>
+                <span class="brand-title" id="nav-title">/ PROJECT MANAGER</span>
+            </a>
+
+            <div class="nav-right">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-link active" id="nav-about">ABOUT ME</a></li>
+                        <li><a href="resume.html" class="nav-link" id="nav-resume">RESUME</a></li>
+                        <li><a href="projects.html" class="nav-link" id="nav-projects">PROJECTS</a></li>
+                    </ul>
+                </nav>
+
+                <button class="lang-switch-btn" onclick="toggleLanguage()" id="lang-btn">
+                    <span>EN</span> | <span class="active-lang">繁中</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主內容區：About Me -->
+    <main class="page-view active">
+        <section class="hero-section container">
+            <div class="hero-grid">
+                
+                <div class="hero-left-block">
+                    <div class="hero-bg-card"></div>
+                    <div class="profile-card">
+                        <div class="avatar-container">
+                            <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="140" height="140" fill="#E8E5DF"/>
+                                <circle cx="70" cy="52" r="28" fill="#8A9A86"/>
+                                <path d="M70 88C45 88 28 105 28 126H112C112 105 95 88 70 88Z" fill="#8A9A86"/>
+                            </svg>
+                        </div>
+                        <h2 class="profile-name" id="card-name">Maya<br>Nelson</h2>
+                        <div class="profile-divider"></div>
+                        <p class="profile-subtitle" id="card-title">PROJECT MANAGER</p>
+                    </div>
+                </div>
+
+                <div class="hero-right-content">
+                    <h1 class="hero-title" id="hero-title">Hello</h1>
+                    <p class="hero-subtitle" id="hero-subtitle">Here's who I am & what I do</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="resume.html" class="btn btn-primary" id="btn-resume">RESUME</a>
+                        <a href="projects.html" class="btn btn-outline" id="btn-projects">PROJECTS</a>
+                    </div>
+
+                    <div class="hero-description">
+                        <p id="hero-p1">
+                            I'm a certified Senior Project Manager with over 8 years of experience leading cross-functional tech teams and driving agile product delivery.
+                        </p>
+                        <p id="hero-p2">
+                            My approach centers on collaborative leadership, proactive risk management, and fostering open communication across engineering, design, and executive stakeholders.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p id="footer-copy">&copy; 2026 Maya Nelson. All rights reserved.</p>
+            <p id="footer-tag">Designed with Sage Green accent &amp; Asymmetric layout.</p>
+        </div>
+    </footer>
+
+    <!-- 連結 JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

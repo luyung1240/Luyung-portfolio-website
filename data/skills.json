@@ -1,0 +1,14 @@
+[
+  {
+    "category": { "en": "BIM & Modeling", "zh": "BIM 與建模工具" },
+    "items": ["Revit Architecture", "AutoCAD", "Rhino 3D", "Grasshopper", "SketchUp"]
+  },
+  {
+    "category": { "en": "Visualization & Software", "zh": "渲染與軟體應用" },
+    "items": ["Enscape", "Twinmotion", "Adobe Photoshop", "Adobe Illustrator"]
+  },
+  {
+    "category": { "en": "Certifications", "zh": "專業認證" },
+    "items": ["Autodesk Certified User: Revit Architecture", "BIM Building Information Modeling"]
+  }
+]

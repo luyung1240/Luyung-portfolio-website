@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2024 - PRESENT",
+    "role": { "en": "BIM Specialist / Architectural Assistant", "zh": "BIM 工程師 / 建築助理" },
+    "company": "Your Company or Studio Name",
+    "desc": {
+      "en": "Responsible for 3D BIM modeling, parametric family creation, and interdisciplinary clash detection using Autodesk Revit.",
+      "zh": "負責使用 Revit 進行 3D BIM 模型建置、元件庫繪製，以及跨專業衝突檢核與協調。"
+    }
+  },
+  {
+    "date": "2020 - 2024",
+    "role": { "en": "Bachelor of Architecture", "zh": "建築學士" },
+    "company": "National Taiwan University of Science and Technology (NTUST)",
+    "desc": {
+      "en": "Focused on architectural design, digital modeling, and building technology. Earned Autodesk Certified User: Revit Architecture certification.",
+      "zh": "專攻建築設計、數位建模與建築技術，並於在學期間考取 Autodesk Certified User: Revit Architecture 原廠認證。"
+    }
+  }
+]

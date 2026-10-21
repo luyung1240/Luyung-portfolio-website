@@ -1,6 +1,7 @@
 let currentLang = localStorage.getItem('site_lang') || 'en';
 let projectsData = [];
 let experienceData = [];
+let skillsData = [];
 
 const i18n = {
     en: {
@@ -66,8 +67,12 @@ async function initSite() {
             const res = await fetch('data/projects.json');
             projectsData = await res.json();
         } else if (pageType === 'resume') {
-            const res = await fetch('data/experience.json');
-            experienceData = await res.json();
+            const [expRes, skillsRes] = await Promise.all([
+                fetch('data/experience.json'),
+                fetch('data/skills.json')
+                ]);
+                experienceData = await expRes.json();
+                skillsData = await skillsRes.json();
         }
     } catch (err) {
         console.error("載入 JSON 資料失敗:", err);
@@ -142,14 +147,27 @@ function renderUI() {
         if(document.getElementById('resume-header-title')) document.getElementById('resume-header-title').textContent = txt.resumeHeaderTitle;
         if(document.getElementById('resume-header-subtitle')) document.getElementById('resume-header-subtitle').textContent = txt.resumeHeaderSubtitle;
         if(document.getElementById('resume-skills-heading')) document.getElementById('resume-skills-heading').textContent = txt.resumeSkillsHeading;
-        if(document.getElementById('skill-cat-1')) document.getElementById('skill-cat-1').textContent = txt.skillCat1;
-        if(document.getElementById('skill-cat-2')) document.getElementById('skill-cat-2').textContent = txt.skillCat2;
-        if(document.getElementById('skill-cat-3')) document.getElementById('skill-cat-3').textContent = txt.skillCat3;
         if(document.getElementById('resume-exp-heading')) document.getElementById('resume-exp-heading').textContent = txt.resumeExpHeading;
 
-        const container = document.getElementById('experience-list-container');
-        if (container && experienceData.length > 0) {
-            container.innerHTML = experienceData.map(exp => `
+        // 渲染左側：Skills & Expertise (來自 data/skills.json)
+        const skillsContainer = document.getElementById('skills-list-container');
+        if (skillsContainer && skillsData.length > 0) {
+            skillsContainer.innerHTML = skillsData.map(group => `
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="font-size: 0.9rem; margin-bottom: 0.8rem; text-transform: uppercase; color: var(--color-text-muted);">
+                        ${group.category[currentLang]}
+                    </h4>
+                    <ul class="resume-skills-list">
+                        ${group.items.map(item => `<li class="skill-tag">${item}</li>`).join('')}
+                    </ul>
+                </div>
+            `).join('');
+        }
+
+        // 渲染右側：Work Experience (來自 data/experience.json)
+        const expContainer = document.getElementById('experience-list-container');
+        if (expContainer && experienceData.length > 0) {
+            expContainer.innerHTML = experienceData.map(exp => `
                 <div class="resume-item">
                     <div class="resume-date">${exp.date}</div>
                     <h3 class="resume-role">${exp.role[currentLang]}</h3>

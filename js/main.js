@@ -3,6 +3,13 @@ let projectsData = [];
 let experienceData = [];
 let skillsData = [];
 
+// 1. 強效防呆多語言轉換工具（請確保放在全域最上方）
+function getI18nText(fieldObj) {
+    if (!fieldObj) return '';
+    if (typeof fieldObj === 'string') return fieldObj;
+    return fieldObj[currentLang] || fieldObj['en'] || fieldObj['zh'] || '';
+}
+
 const i18n = {
     en: {
         navName: "LU YUNG-CHIEH",

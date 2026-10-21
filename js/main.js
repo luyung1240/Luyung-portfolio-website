@@ -174,15 +174,15 @@ if (pageType === 'projects') {
             `).join('');
         }
 
-        // 渲染右側：Work Experience (來自 data/experience.json)
+        // 渲染右側：Work Experience
         const expContainer = document.getElementById('experience-list-container');
-        if (expContainer && experienceData.length > 0) {
+        if (expContainer && Array.isArray(experienceData) && experienceData.length > 0) {
             expContainer.innerHTML = experienceData.map(exp => `
                 <div class="resume-item">
-                    <div class="resume-date">${exp.date}</div>
-                    <h3 class="resume-role">${exp.role[currentLang]}</h3>
+                    <div class="resume-date">${exp.date || ''}</div>
+                    <h3 class="resume-role">${getI18nText(exp.role)}</h3>
                     <p class="resume-company">${getI18nText(exp.company)}</p>
-                    <p style="font-size: 0.9rem; color: var(--color-text-muted);">${exp.desc[currentLang]}</p>
+                    <p style="font-size: 0.9rem; color: var(--color-text-muted);">${getI18nText(exp.desc || exp.description)}</p>
                 </div>
             `).join('');
         }

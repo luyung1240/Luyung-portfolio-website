@@ -1,20 +1,31 @@
 [
   {
-    "date": "2024 - PRESENT",
-    "role": { "en": "BIM Specialist / Architectural Assistant", "zh": "BIM 工程師 / 建築助理" },
-    "company": "Your Company or Studio Name",
+    "date": "2025/03 - PRESENT",
+    "role": { "en": "BIM Trainee Engineer", "zh": "BIM 實習工程師" },
+    "company": { "en": "FLOW", "zh": "若水國際" },
     "desc": {
       "en": "Responsible for 3D BIM modeling, parametric family creation, and interdisciplinary clash detection using Autodesk Revit.",
       "zh": "負責使用 Revit 進行 3D BIM 模型建置、元件庫繪製，以及跨專業衝突檢核與協調。"
     }
   },
+
   {
-    "date": "2020 - 2024",
-    "role": { "en": "Bachelor of Architecture", "zh": "建築學士" },
-    "company": "National Taiwan University of Science and Technology (NTUST)",
+    "date": "2025/07 - 2025/08",
+    "role": { "en": "Intern", "zh": "暑期實習生" },
+    "company": { "en": "CATHAY RED", "zh": "國泰建設" },
     "desc": {
-      "en": "Focused on architectural design, digital modeling, and building technology. Earned Autodesk Certified User: Revit Architecture certification.",
-      "zh": "專攻建築設計、數位建模與建築技術，並於在學期間考取 Autodesk Certified User: Revit Architecture 原廠認證。"
+      "en": "Project Reporting、Site Visits、Real Estate & Market Research",
+      "zh": "專題報告製作、建案工地參訪、市場調查學習"
+    }
+  },
+
+  {
+    "date": "2024/01 - 2025/06",
+    "role": { "en": "Design Assistant", "zh": "設計助理" },
+    "company": { "en": "ZHIAA", "zh": "黃聖吉建築師事務所" },
+    "desc": {
+      "en": "BIM Modeling、Family Creation、Quantity Takeoffs",
+      "zh": "Revit模型建構、Revit元件製作、Revit明細表計算"
     }
   }
 ]

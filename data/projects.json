@@ -1,21 +1,21 @@
 [
   {
     "id": "project-1",
-    "category": { "en": "BIM Modeling", "zh": "BIM 模型建構" },
-    "title": { "en": "NTUST Campus Building BIM Reconstruction", "zh": "臺科大校園建築 BIM 擬真建模專案" },
+    "category": { "en": "Architectural Design", "zh": "建築設計" },
+    "title": { "en": "Shelter", "zh": "災難屋" },
     "description": { 
-      "en": "Detailed 3D architectural and structural BIM modeling created with Autodesk Revit, featuring custom parametric families and clash detection.",
-      "zh": "使用 Autodesk Revit 進行高精度建築與結構 3D 模型建置，包含自訂參數化元件庫開發與跨專業干涉檢核。"
+      "en": "In response to Taiwan’s frequent typhoons and aging population, this project designs a rehabilitation clinic and shelter that expands its architectural space during severe flooding.",
+      "zh": "因應台灣台灣常受颱風侵襲以及老年化的議題，設計一棟當水災來臨時可延伸出建築空間的復健診所暨收容中心。"
     },
     "image": "assets/project1.png"
   },
   {
     "id": "project-2",
-    "category": { "en": "Architectural Design", "zh": "建築概念設計" },
-    "title": { "en": "Urban Cultural Center Design", "zh": "城市文化中心建築設計" },
+    "category": { "en": "Architectural Design", "zh": "建築設計" },
+    "title": { "en": "Social Housing", "zh": "社會住宅" },
     "description": { 
-      "en": "Conceptual design and visualization focusing on spatial flow, structural logic, and sustainable environmental integration.",
-      "zh": "著重於空間動線規劃、結構邏輯與永續環境整合的建築概念設計與渲染呈現。"
+      "en": "By integrating a kindergarten and residential program, the design utilizes the site’s 2-meter terrain shift to weave dynamic social spaces and seamlessly bridge the building with its surrounding environment.",
+      "zh": "結合幼兒園與住宅功能，利用2m高差地形創造多樣化交流空間、並利用建築功能串聯周遭場域。"
     },
     "image": "assets/project2.png"
   }

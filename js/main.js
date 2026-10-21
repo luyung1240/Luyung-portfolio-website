@@ -181,7 +181,7 @@ if (pageType === 'projects') {
                 <div class="resume-item">
                     <div class="resume-date">${exp.date}</div>
                     <h3 class="resume-role">${exp.role[currentLang]}</h3>
-                    <p class="resume-company">${exp.company}</p>
+                    <p class="resume-company">${getI18nText(exp.company)}</p>
                     <p style="font-size: 0.9rem; color: var(--color-text-muted);">${exp.desc[currentLang]}</p>
                 </div>
             `).join('');

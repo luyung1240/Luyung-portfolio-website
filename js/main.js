@@ -22,7 +22,7 @@ const i18n = {
         projectsHeaderSubtitle: "A showcase of architectural and BIM projects led and crafted by me.",
         resumeHeaderTitle: "Resume",
         resumeHeaderSubtitle: "Equipped with diverse internship experience and proven expertise in cross-functional communication and coordination.",
-        resumeSkillsHeading: "Skills & Expertise",
+        resumeSkillsHeading: "Skills",
         skillCat1: "Methodologies",
         skillCat2: "Tools & Software",
         skillCat3: "Certifications",

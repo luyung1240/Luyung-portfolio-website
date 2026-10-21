@@ -145,11 +145,6 @@ if (pageType === 'projects') {
                         ${categoryText ? `<span class="project-tag">${categoryText}</span>` : ''}
                         <h3 class="project-title">${titleText}</h3>
                         <p class="project-desc">${descText}</p>
-                        <div>
-                            <a href="${p.linkUrl || '#'}" class="link-btn" target="_blank" rel="noopener noreferrer">
-                                ${linkText} &rarr;
-                            </a>
-                        </div>
                     </div>
                 </article>
             `;

@@ -70,9 +70,9 @@ async function initSite() {
             const [expRes, skillsRes] = await Promise.all([
                 fetch('data/experience.json'),
                 fetch('data/skills.json')
-                ]);
-                experienceData = await expRes.json();
-                skillsData = await skillsRes.json();
+            ]);
+            experienceData = await expRes.json();
+            skillsData = await skillsRes.json();
         }
     } catch (err) {
         console.error("載入 JSON 資料失敗:", err);
@@ -116,31 +116,46 @@ function renderUI() {
     }
 
     // Projects 頁面渲染
-    if (pageType === 'projects') {
-        if(document.getElementById('projects-header-title')) document.getElementById('projects-header-title').textContent = txt.projectsHeaderTitle;
-        if(document.getElementById('projects-header-subtitle')) document.getElementById('projects-header-subtitle').textContent = txt.projectsHeaderSubtitle;
-        
-        const container = document.getElementById('full-projects-container');
-        if (container && projectsData.length > 0) {
-            container.innerHTML = projectsData.map(p => `
+if (pageType === 'projects') {
+    if (document.getElementById('projects-header-title')) {
+        document.getElementById('projects-header-title').textContent = txt.projectsHeaderTitle;
+    }
+    if (document.getElementById('projects-header-subtitle')) {
+        document.getElementById('projects-header-subtitle').textContent = txt.projectsHeaderSubtitle;
+    }
+    
+    const container = document.getElementById('full-projects-container');
+    
+    // 加上 Array.isArray 防呆，確保資料存在且為陣列格式
+    if (container && Array.isArray(projectsData) && projectsData.length > 0) {
+        container.innerHTML = projectsData.map(p => {
+            // 處理多語系文字與預設圖片防呆
+            const titleText = p.title ? (p.title[currentLang] || p.title.en || '') : '';
+            const categoryText = p.category ? (p.category[currentLang] || p.category.en || '') : '';
+            const descText = p.description ? (p.description[currentLang] || p.description.en || '') : '';
+            const linkText = p.linkText ? (p.linkText[currentLang] || p.linkText.en || 'View Project') : 'View Project';
+            const imgSrc = p.image || 'https://placehold.co/600x400?text=Project+Image';
+
+            return `
                 <article class="project-card">
                     <div class="project-img-wrapper">
-                        <img class="project-img" src="${p.image}" alt="${p.title[currentLang]}" loading="lazy">
+                        <img class="project-img" src="${imgSrc}" alt="${titleText}" loading="lazy">
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">${p.category[currentLang]}</span>
-                        <h3 class="project-title">${p.title[currentLang]}</h3>
-                        <p class="project-desc">${p.description[currentLang]}</p>
+                        ${categoryText ? `<span class="project-tag">${categoryText}</span>` : ''}
+                        <h3 class="project-title">${titleText}</h3>
+                        <p class="project-desc">${descText}</p>
                         <div>
-                            <a href="${p.linkUrl}" class="link-btn">
-                                ${p.linkText[currentLang]} &rarr;
+                            <a href="${p.linkUrl || '#'}" class="link-btn" target="_blank" rel="noopener noreferrer">
+                                ${linkText} &rarr;
                             </a>
                         </div>
                     </div>
                 </article>
-            `).join('');
-        }
+            `;
+        }).join('');
     }
+}
 
     // Resume 頁面渲染
     if (pageType === 'resume') {

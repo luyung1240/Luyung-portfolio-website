@@ -7,7 +7,7 @@
       "en": "Detailed 3D architectural and structural BIM modeling created with Autodesk Revit, featuring custom parametric families and clash detection.",
       "zh": "使用 Autodesk Revit 進行高精度建築與結構 3D 模型建置，包含自訂參數化元件庫開發與跨專業干涉檢核。"
     },
-    "image": "https://raw.githubusercontent.com/luyung1240/Luyung-portfolio-website/main/assets/project1.png"
+    "image": "assets/project1.png"
   },
   {
     "id": "project-2",
@@ -17,6 +17,6 @@
       "en": "Conceptual design and visualization focusing on spatial flow, structural logic, and sustainable environmental integration.",
       "zh": "著重於空間動線規劃、結構邏輯與永續環境整合的建築概念設計與渲染呈現。"
     },
-    "image": "https://raw.githubusercontent.com/luyung1240/Luyung-portfolio-website/main/assets/project2.png"
+    "image": "assets/project2.png"
   }
 ]
